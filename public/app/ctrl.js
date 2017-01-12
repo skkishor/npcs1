@@ -29,6 +29,18 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location) {
         $('[data-link="info"]').addClass('active');
     }
 
+    if($location.path() == '/agent' ||
+    $location.path() == '/ants' ||
+    $location.path() == '/bed-bugs' ||
+    $location.path() == '/flies' ||
+    $location.path() == '/food' ||
+    $location.path() == '/kitchen' ||
+    $location.path() == '/roaches' ||
+    $location.path() == '/products') {
+        $('.navi-item').removeClass('active');
+        $('[data-link="gallery"]').addClass('active');
+    }
+    
 
 
 
