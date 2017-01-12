@@ -22,7 +22,7 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location) {
     }
     if($location.path() == '/contact') {
         $('.navi-item').removeClass('active');
-        $('[data-link="faq"]').addClass('active');
+        $('[data-link="contact"]').addClass('active');
     }
     if($location.path() == '/pest-inspection' || $location.path() == '/call-experts' || $location.path() == '/easy-way') {
         $('.navi-item').removeClass('active');
