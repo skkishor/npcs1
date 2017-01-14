@@ -44,6 +44,16 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         controller  : 'HomeCtrl'
     })
 
+    .when('/fleas', {
+        templateUrl : viewDir+'gallery/fleas-view.html',
+        controller  : 'HomeCtrl'
+    })
+
+    .when('/spiders', {
+        templateUrl : viewDir+'gallery/spiders-view.html',
+        controller  : 'HomeCtrl'
+    })
+
     .when('/products', {
         templateUrl : viewDir+'gallery/products-view.html',
         controller  : 'HomeCtrl'
