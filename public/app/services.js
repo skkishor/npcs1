@@ -26,6 +26,8 @@ app.service('customJS', function() {
         		$('body').css("background-color","#f0f0f0");
         	}
 
+            
+
         	/*------------------------------
         		MAGNIFIC POPUP
         	------------------------------*/

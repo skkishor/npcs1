@@ -7,6 +7,8 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location, $http)
 
     $scope.details = details;
 
+
+
     $('.navi-item').removeClass('active');
     if($location.path() == '/') {
         $('.navi-item').removeClass('active');
@@ -42,7 +44,43 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location, $http)
     }
 
     $scope.contact = {};
-    $scope.homeContact = {};
+
+
+    $('.home-form-click').on('click', function(e) {
+        /*e.preventDefault();
+        $scope.homeContact = {};
+        $scope.homeContact.name = $('#name').val();
+        $scope.homeContact.email = $('#email').val();
+        $scope.homeContact.phone = $('#phone').val();
+        $scope.homeContact.msg = $('#msg').val();
+
+        var flag = 0;
+        if($scope.homeContact.name.length < 3) {
+            flag++;
+        }
+        if($scope.homeContact.email.length < 4) {
+            flag++;
+        }
+        if($scope.homeContact.phone.length < 3) {
+            flag++;
+        }
+        if($scope.homeContact.msg.length < 5) {
+            flag++;
+        }
+        console.log(flag);
+        if(flag == 0) {
+            $http.post('/submit-contact', $scope.homeContact).then(function(response) {
+                if(response.data.success == true) {
+                    alert('Email Sent! We will get back to you shortly.')
+                } else {
+                    alert('Email Failed! Try again later, sorry for the inconvenience.')
+                }
+            })
+        }*/
+
+    })
+
+    $scope.test = function() {console.log('pop');}
 
     $scope.submitContact = function() {
 
