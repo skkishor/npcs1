@@ -43,6 +43,34 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location, $http)
         $('[data-link="gallery"]').addClass('active');
     }
 
+    //$('.megamenu ul').hide();
+
+    if($(window).width() < 768) {
+        $('.dropdown-menu').hide();
+    }
+
+    $('.megamenu').on('click', function() {
+        if($(window).width() < 768) {
+            if($(this).hasClass('open')) {
+                $(this).children('ul').hide();
+            } else {
+                $(this).children('ul').show();
+            }
+        }
+    })
+
+
+    $('.dropdown-toggle').on('click', function() {
+        if($(window).width() < 768) {
+            console.log($(this).attr('aria-expanded'));
+            if($(this).attr('aria-expanded') == 'true') {
+                $(this).next().hide();
+            } else {
+                $(this).next().show();
+            }
+        }
+    })
+
     $scope.contact = {};
 
 
