@@ -54,6 +54,36 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         controller  : 'HomeCtrl'
     })
 
+    .when('/bees', {
+        templateUrl : viewDir+'gallery/bees-view.html',
+        controller  : 'HomeCtrl'
+    })
+
+    .when('/moths', {
+        templateUrl : viewDir+'gallery/moths-view.html',
+        controller  : 'HomeCtrl'
+    })
+
+    .when('/wasps', {
+        templateUrl : viewDir+'gallery/wasps-view.html',
+        controller  : 'HomeCtrl'
+    })
+
+    .when('/rats-mice', {
+        templateUrl : viewDir+'gallery/rats-mice-view.html',
+        controller  : 'HomeCtrl'
+    })
+
+    .when('/squirrel', {
+        templateUrl : viewDir+'gallery/squirrel-view.html',
+        controller  : 'HomeCtrl'
+    })
+
+    .when('/pigeons', {
+        templateUrl : viewDir+'gallery/pigeons-view.html',
+        controller  : 'HomeCtrl'
+    })
+
     .when('/products', {
         templateUrl : viewDir+'gallery/products-view.html',
         controller  : 'HomeCtrl'

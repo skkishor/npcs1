@@ -35,3 +35,17 @@ app.directive('posts', function() {
 		controller: 'HomeCtrl',
 	}
 })
+
+app.directive('contacts', function() {
+	return {
+		templateUrl: dir+'contacts.html',
+		controller: 'HomeCtrl',
+	}
+})
+
+app.directive('msg', function() {
+	return {
+		templateUrl: dir+'msg.html',
+		controller: 'HomeCtrl',
+	}
+})
