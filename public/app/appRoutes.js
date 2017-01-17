@@ -39,60 +39,76 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         controller  : 'HomeCtrl'
     })
 
-    .when('/flies', {
-        templateUrl : viewDir+'gallery/fly-view.html',
-        controller  : 'HomeCtrl'
-    })
+        // PESTS
 
-    .when('/fleas', {
-        templateUrl : viewDir+'gallery/fleas-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/flies', {
+                templateUrl : viewDir+'pests/fly-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/spiders', {
-        templateUrl : viewDir+'gallery/spiders-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/fleas', {
+                templateUrl : viewDir+'pests/fleas-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/bees', {
-        templateUrl : viewDir+'gallery/bees-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/spiders', {
+                templateUrl : viewDir+'pests/spiders-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/moths', {
-        templateUrl : viewDir+'gallery/moths-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/bees', {
+                templateUrl : viewDir+'pests/bees-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/wasps', {
-        templateUrl : viewDir+'gallery/wasps-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/moths', {
+                templateUrl : viewDir+'pests/moths-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/rats-mice', {
-        templateUrl : viewDir+'gallery/rats-mice-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/wasps', {
+                templateUrl : viewDir+'pests/wasps-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/squirrel', {
-        templateUrl : viewDir+'gallery/squirrel-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/rats-mice', {
+                templateUrl : viewDir+'pests/rats-mice-view.html',
+                controller  : 'HomeCtrl'
+            })
 
-    .when('/pigeons', {
-        templateUrl : viewDir+'gallery/pigeons-view.html',
-        controller  : 'HomeCtrl'
-    })
+            .when('/squirrel', {
+                templateUrl : viewDir+'pests/squirrel-view.html',
+                controller  : 'HomeCtrl'
+            })
+
+            .when('/pigeons', {
+                templateUrl : viewDir+'pests/pigeons-view.html',
+                controller  : 'HomeCtrl'
+            })
+
+            .when('/bed-bugs', {
+                templateUrl : viewDir+'pests/bed-bugs-view.html',
+                controller  : 'HomeCtrl'
+            })
+
+            .when('/ants', {
+                templateUrl : viewDir+'pests/ants-view.html',
+                controller  : 'HomeCtrl'
+            })
+
+            .when('/roaches', {
+                templateUrl : viewDir+'pests/roaches-view.html',
+                controller  : 'HomeCtrl'
+            })
+
+    // END PESTS
+
 
     .when('/products', {
         templateUrl : viewDir+'gallery/products-view.html',
         controller  : 'HomeCtrl'
     })
 
-    .when('/bed-bugs', {
-        templateUrl : viewDir+'gallery/bed-bugs-view.html',
-        controller  : 'HomeCtrl'
-    })
 
     .when('/food', {
         templateUrl : viewDir+'gallery/food-view.html',
@@ -104,15 +120,7 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         controller  : 'HomeCtrl'
     })
 
-    .when('/ants', {
-        templateUrl : viewDir+'gallery/ants-view.html',
-        controller  : 'HomeCtrl'
-    })
 
-    .when('/roaches', {
-        templateUrl : viewDir+'gallery/roaches-view.html',
-        controller  : 'HomeCtrl'
-    })
 
     .when('/agent', {
         templateUrl : viewDir+'gallery/agent-view.html',

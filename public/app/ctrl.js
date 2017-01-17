@@ -1,4 +1,4 @@
-app.controller('HomeCtrl', function($scope, details, customJS, $location, $http) {
+app.controller('HomeCtrl', function($scope, details, customJS, $location, $http, $route) {
     customJS.exe();
     if($('.owl-controls').length > 0) {
         $('.owl-controls').hide();
@@ -9,7 +9,20 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location, $http)
 
 
 
+    var urlSplit = $route.current.templateUrl.split('/');
     $('.navi-item').removeClass('active');
+    if(urlSplit[2] == 'pests') {
+        $('.navi-item').removeClass('active');
+        $('[data-link="pests"]').addClass('active');
+    }
+    if(urlSplit[2] == 'gallery') {
+        $('.navi-item').removeClass('active');
+        $('[data-link="gallery"]').addClass('active');
+    }
+    if(urlSplit[2] == 'articles') {
+        $('.navi-item').removeClass('active');
+        $('[data-link="info"]').addClass('active');
+    }
     if($location.path() == '/') {
         $('.navi-item').removeClass('active');
         $('[data-link="home"]').addClass('active');
@@ -26,24 +39,7 @@ app.controller('HomeCtrl', function($scope, details, customJS, $location, $http)
         $('.navi-item').removeClass('active');
         $('[data-link="contact"]').addClass('active');
     }
-    if($location.path() == '/pest-inspection' || $location.path() == '/call-experts' || $location.path() == '/easy-way') {
-        $('.navi-item').removeClass('active');
-        $('[data-link="info"]').addClass('active');
-    }
-
-    if($location.path() == '/agent' ||
-    $location.path() == '/ants' ||
-    $location.path() == '/bed-bugs' ||
-    $location.path() == '/flies' ||
-    $location.path() == '/food' ||
-    $location.path() == '/kitchen' ||
-    $location.path() == '/roaches' ||
-    $location.path() == '/products') {
-        $('.navi-item').removeClass('active');
-        $('[data-link="gallery"]').addClass('active');
-    }
-
-    //$('.megamenu ul').hide();
+    
 
     if($(window).width() < 768) {
         $('.dropdown-menu').hide();
